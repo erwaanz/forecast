@@ -105,9 +105,20 @@
 	"type": "sap.ui.model.json.JSONModel",
 	"preload": true,
 	"uri": "model/algorithms/pal/auto_arima.json"
+	
+	},
+	"pal_auto_smooting": {
+	"type": "sap.ui.model.json.JSONModel",
+	"preload": true,
+	"uri": "model/algorithms/pal/auto_smooting.json"
+	
+	},
+	"pal_seasonality_test": {
+	"type": "sap.ui.model.json.JSONModel",
+	"preload": true,
+	"uri": "model/algorithms/pal/seasonality_test.json"
 }
 
-	
 },
 
 		"resources": {
@@ -124,7 +135,8 @@
 		"controlAggregation": "pages",
 		"controlId": "idAppControl"
 	},
-	"routes": [{
+	"routes": [
+	{
 		"name": "home",
 		"pattern": "",
 		"target": "demo"
@@ -138,6 +150,16 @@
 	"name": "auto_arima",
 	"pattern": "auto_arima",
 	"target": "auto_arima"
+	},
+	{
+	"name": "auto_smooting",
+	"pattern": "auto_smooting",
+	"target": "auto_smooting"
+	},
+	{
+	"name": "seasonality_test",
+	"pattern": "seasonality_test",
+	"target": "seasonality_test"
 	}
 	],
 	"targets": {
@@ -145,7 +167,7 @@
 			"clearAggregation": true,
 			"viewName": "demo",
 			"viewLevel": 1
-			},
+		},
 		"forecast": {
 			"clearAggregation": true,
 			"viewName": "algorithms.apl.forecast"
@@ -153,7 +175,16 @@
 		"auto_arima": {
 			"clearAggregation": true,
 			"viewName": "algorithms.pal.auto_arima"
+		},
+		"auto_smooting": {
+			"clearAggregation": true,
+			"viewName": "algorithms.pal.auto_smooting"
+		},
+		"seasonality_test": {
+			"clearAggregation": true,
+			"viewName": "algorithms.pal.seasonality_test"
 		}
+
 	}
 }
 
